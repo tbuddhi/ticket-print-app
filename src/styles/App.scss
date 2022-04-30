@@ -1,9 +1,81 @@
-.products{
-    list-style: none;
-    &__item{
-       > div {
+@import './widgets.scss';
+
+// Main App styles
+.appBox{
+    height: 100vh;
+    margin: auto;
+
+    &__title{
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+}
+
+// Modal styles
+.modal__btnGroup{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 30px;
+
+    button{
+        margin-left: .75rem;
+    }
+}
+
+.ReactModal__Overlay{
+    background-color: rgba(126, 126, 126, 0.7) !important;
+    backdrop-filter: blur(4px);
+}
+
+// Common styles
+.btnHome-wrapper{
+    position: absolute;
+    top: 1rem;
+    width: 60px;
+    height: 50px;
+    background: #9c27b0;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, .3);
+    cursor: pointer;
+
+    a{
+        width: 100%;
+        height: 100%;
         display: flex;
-        justify-content: space-between;
-       }
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.landingNav{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    a{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        text-decoration: none;
+        color: initial;
+        transition: all .3s;
+
+        &:hover{
+            text-decoration: underline;
+            background-color: #e7e7e7;
+        }
+    }
+
+    &__ticket{
+        background-color: #3A53A2;
+        color: white !important;
+
+        &:hover{
+            background-color: #32488e !important;
+        }
     }
 }

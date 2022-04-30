@@ -1,0 +1,130 @@
+// Variables
+$clr-subTitle: #3e3e78;
+
+// Mixins
+@mixin counter {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: $clr-subTitle;  
+}
+
+.widget-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    margin: auto;
+    background: #f5f6fc;
+    padding: 1rem;
+}
+
+.progressWidget{
+    display: flex;
+    height: 60px;
+    padding: 0.75rem;
+    align-items: center;
+    font-family: revert;
+
+    &__avatar{
+        display: flex;
+        width: 45px;
+        height: 45px;
+        background: white;
+        box-shadow: 2px 6px 8px rgba(0, 0, 0, .3);
+        margin: 5px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+
+        &--pWrapper{
+            display: flex;
+        }
+
+        &--title{
+            color: $clr-subTitle;
+        }
+
+        &--count{
+            @include counter;
+        }
+
+        &--progressBar{
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 6px;
+
+            .pBar{
+                width: 80px;
+                height: 5px;
+                background: #dbdff1;
+                display: inline-block;
+                border-radius: 4px;
+
+                &.pBar1 {
+                    margin-right: 3px;
+                    background-color: #8676ff;
+                }
+                &.pBar2 {
+                    background: linear-gradient(to right, #ff708a 50%, #dbdff1 50%);
+                }
+            }
+        }
+    }
+}
+
+.chartWidget{
+    display: flex;
+    background: white;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;  
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, .25);
+
+    &__chart{
+        display: flex;
+        width: 110px;
+        height: auto;
+        margin: 5px;
+        border-radius: 10px;
+        justify-content: center; 
+        align-items: center;
+
+        img{ 
+            width: 100%;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+
+        &--title{
+            color: $clr-subTitle;
+        }
+
+        &--percentage{
+            @include counter;
+        } 
+
+        &--status{
+            font-weight: 600;
+            color: green; 
+
+            .sIcon{
+                position: relative;
+                top: 8px;
+    
+                svg{
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+}

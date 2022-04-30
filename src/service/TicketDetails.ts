@@ -6,11 +6,11 @@ type TicketProps = {
 }[];
 
 export const ticketDetails: TicketProps = [
-    { product: 'Water', type: 'drinks', quantity: 10, unitPrice: 1 },
-    { product: 'Chicken wings', type: 'food', quantity: 3, unitPrice: 5 },
-    { product: 'Steak', type: 'food', quantity: 1, unitPrice: 9 },
-    { product: 'coffee', type: 'drinks', quantity: 4, unitPrice: 2 },
-    { product: 'Wine bottle', type: 'drinks', quantity: 1, unitPrice: 7 },
+    { product: 'Water', type: 'Drinks', quantity: 10, unitPrice: 1 },
+    { product: 'Chicken wings', type: 'Food', quantity: 3, unitPrice: 5 },
+    { product: 'Steak', type: 'Food', quantity: 1, unitPrice: 9 },
+    { product: 'coffee', type: 'Drinks', quantity: 4, unitPrice: 2 },
+    { product: 'Wine bottle', type: 'Drinks', quantity: 1, unitPrice: 7 },
 ]
 
 // Using this for loop we can print each object in the console

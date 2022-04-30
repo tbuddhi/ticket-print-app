@@ -1,16 +1,23 @@
 import React from 'react'
-import './styles/App.scss'
-import { Ticket } from './components/Ticket';
+import { Routes, Route } from "react-router-dom";
 import Modal from 'react-modal';
+import './styles/App.scss'
+
+import DashboardWidget from './components/DashboardWidget';
+import InvoiceTicket from './components/InvoiceTicket';
+import LandingPage from './components/LandingPage';
 
 Modal.setAppElement('#root')
 
 function App() {
   return (
-    <div >
-      <h1>Ticket Printing App</h1>
-      <Ticket />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/ticket" element={<InvoiceTicket />} />
+        <Route path="/dashboard" element={<DashboardWidget />} />
+      </Routes>
+    </>
   );
 }
 
