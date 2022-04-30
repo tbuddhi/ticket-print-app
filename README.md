@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo [Ticket-app](https://friendly-pie-1eb6d9.netlify.app).
 
 ## Available Scripts
 
