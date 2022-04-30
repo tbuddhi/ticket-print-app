@@ -1,0 +1,9 @@
+.products{
+    list-style: none;
+    &__item{
+       > div {
+        display: flex;
+        justify-content: space-between;
+       }
+    }
+}
